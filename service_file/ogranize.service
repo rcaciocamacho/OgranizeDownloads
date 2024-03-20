@@ -1,0 +1,15 @@
+[Unit]
+Description=Servicio para organizar las descargas
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=rccamacho
+ExecStart=/usr/bin/python3 /home/rccamacho/.config/ogranizeDownload/main.py
+
+[Install]
+WantedBy=multi-user.target
+
