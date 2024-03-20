@@ -5,6 +5,7 @@ import shutil
 import time
 import logging
 import logging.config
+from PIL import Image
 from functions import *
 from fileprops import _file_props, get_properties_file, get_join_path 
 from classes import file_props
@@ -31,12 +32,18 @@ def organize_files():
         create_dir_path(get_join_path("dp"))
 
     logger.debug("Copiando archivo en destino: " + get_join_path("fp") + " -> " + get_join_path("dp"))
-    shutil.copy2(get_join_path("fp"), get_join_path("dp"))
+    if file_props.compress:
+        print(file_props.compress)
+        image_compress_path = get_join_path('dp') + file_name + extension
+        picture = Image.open(get_join_path('fp'))
+        picture.save(image_compress_path, optimize=True, quality=60)
+    else:
+        shutil.copy2(get_join_path("fp"), get_join_path("dp"))
 
     if os.path.exists(get_join_path("fp")):
         logger.debug("Eliminando archivo de origen: " + get_join_path("fp"))
         os.remove(get_join_path("fp"))
-
+        
 
 def main():
     if len(read_arguments) >= 2:

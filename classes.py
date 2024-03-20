@@ -8,3 +8,4 @@ class file_props:
     file_name = ""
     prefix = ""
     log_file_name = ""
+    compress = ""

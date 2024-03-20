@@ -43,12 +43,15 @@ def get_properties_file(extension, file_name):
 
 def _file_props(extension_file, folder_name, file_name):
     global file_props 
+    images = get_json_config(extensions, "Imágenes")
+
     file_props.destination_path = get_json_config(configuration, "dest_path")
     file_props.source_path = get_json_config(configuration, "folder_path")
     file_props.prefix = get_json_config(variables, "prefix_images")
     file_props.folder_name = folder_name
     file_props.file_name = file_name
     file_props.extension_file = extension_file
+    file_props.compress = (extension_file in images)
     
 
 def get_join_path(param_path):
