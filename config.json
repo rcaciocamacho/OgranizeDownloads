@@ -2,9 +2,9 @@
       "configuration": [
             {
                   "folder_path": "/home/rccamacho/Descargas/",
-                  "dest_path": "/home/rccamacho/",
+                  "dest_path": "/home/rccamacho/Descargas/",
                   "wallpaper_path": "/home/rccamacho/Imágenes/Wallpapers/",
-                  "image_os_path": "/home/rccamacho/SOImages/",
+                  "image_os_path": "/home/rccamacho/Descargas/SOImages/",
                   "app_path": "/home/rccamacho/.config/ogranizeDownload/"
             }
       ],
@@ -15,14 +15,13 @@
                   "Isos": ".iso,.ova,.img",
                   "Imágenes": ".jpg,.jpeg,.ico,.mpeg,.avi,.mp4,.png",
                   "Comprimidos": ".7z,.7zip,.tar,.tar.gz,.tar.xz,.zip,.rar,.zip,.tgz",
-                  "Scripts": ".sh,.py,.bash",
+                  "Scripts": ".sh,.py,.bash,.zsh",
                   "Excepciones": ".ini,.DOWNLOAD,.tmp,.part"
             }
       ],
       "custompaths": [
             {
-                  "Imágenes": "/home/rccamacho/Imágenes/Wallpapers/",
-                  "Isos": "/home/rccamacho/SOImages/"
+                  "Imágenes": "/home/rccamacho/Imágenes/Wallpapers/"
             }
       ],
       "variables": [

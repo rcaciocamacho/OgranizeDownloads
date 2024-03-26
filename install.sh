@@ -7,7 +7,7 @@ sudo systemctl disable ogranize.service
 sudo systemctl daemon-reload
 sudo rm -rf /lib/systemd/system/ogranize.service
 
-xecho "Creando directorio de instalación..."
+echo "Creando directorio de instalación..."
 sudo mkdir /home/$USER/.config/ogranizeDownload
 
 echo "Copiando ficheros..."
@@ -23,6 +23,7 @@ echo "Instalando dependencias de pyton..."
 pip install pillow --break-system-packages
 
 echo "Damos permisos a los ficheros de log para escritura"
+sudo touch /home/$USER/.config/ogranizeDownload/indexingFile.log
 sudo chmod 777 /home/$USER/.config/ogranizeDownload/indexingFile.log
 
 echo "Gestionando permisos y habilitando el servicio..."
