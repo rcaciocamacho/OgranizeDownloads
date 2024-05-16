@@ -27,7 +27,6 @@ logger = logging.getLogger("OrganizeFiles")
 def organize_files():
     global file_props
     file_name, extension = os.path.splitext(file_props.file_name)
-
     logger.debug("Filename: " + file_name + extension)
 
     if not os.path.exists(get_join_path("dp")) and not extension in get_json_config(
@@ -36,16 +35,10 @@ def organize_files():
         create_dir_path(get_join_path("dp"))
 
     logger.debug(
-        "Copiando archivo en destino: "
-        + get_join_path("fp")
-        + " -> "
-        + get_join_path("dp")
+        "Copiando archivo en destino: " + get_join_path("fp") + " -> " + get_join_path("dp")
     )
     print(
-        "Copiando archivo en destino: "
-        + get_join_path("fp")
-        + " -> "
-        + get_join_path("dp")
+        "Copiando archivo en destino: " + get_join_path("fp") + " -> " + get_join_path("dp")
     )
 
     if file_props.compress:
